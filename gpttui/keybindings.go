@@ -19,6 +19,7 @@ type KeybindingOverride struct {
 func (gpttui *Gpttui) SetKeybindings() error {
 	keybindings := []Keybinding{
 		{"global_quit", "", gocui.KeyCtrlC, gocui.ModNone, quit},
+		{"global_quit_alt", "", 'q', gocui.ModNone, quit},
 		{"global_nextView", "", gocui.KeyTab, gocui.ModNone, nextView},
 	}
 

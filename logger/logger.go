@@ -5,12 +5,10 @@ import (
 	"gopkg.in/natefinch/lumberjack.v2"
 )
 
-var Log *logrus.Logger
-
-func InitLogger() {
+func New() *logrus.Logger {
 	logFilePath := "debug.log" // TODO: change this depending on the env and maybe also config
 
-	Log = logrus.New()
+	logger := logrus.New()
 	rotatingLogger := &lumberjack.Logger{
 		Filename:   logFilePath,
 		MaxSize:    10,
@@ -19,8 +17,9 @@ func InitLogger() {
 		Compress:   true,
 	}
 
-	Log.SetOutput(rotatingLogger)
+	logger.SetOutput(rotatingLogger)
 
-	Log.SetFormatter(&logrus.JSONFormatter{})
-	Log.SetLevel(logrus.InfoLevel)
+	logger.SetFormatter(&logrus.JSONFormatter{})
+	logger.SetLevel(logrus.InfoLevel)
+	return logger
 }

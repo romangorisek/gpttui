@@ -1,34 +1,34 @@
 package main
 
 import (
-	"log"
-
 	"github.com/awesome-gocui/gocui"
 	"github.com/romangorisek/gpttui/config"
-	"github.com/romangorisek/gpttui/dataservice"
-	"github.com/romangorisek/gpttui/dbservice"
 	"github.com/romangorisek/gpttui/gpttui"
+	"github.com/romangorisek/gpttui/llmservice"
 	"github.com/romangorisek/gpttui/logger"
-	"github.com/romangorisek/gpttui/networkservice"
 )
 
 func main() {
+	log := logger.New()
+
 	gui, err := gocui.NewGui(gocui.OutputNormal, true)
 	if err != nil {
-		log.Panicln(err)
+		log.Panic(err)
 	}
 	defer gui.Close()
 
-	logger.InitLogger()
-
-	sqliteService := dbservice.NewSqliteService("asdfkafd")
-	chatgptService := networkservice.NewChatgptService()
-
-	dataService := dataservice.NewDataService(sqliteService, chatgptService)
-
 	config := config.LoadUserConfig()
 
-	app := gpttui.Init(dataService, gui, config)
+	API_KEY := "jakjsdflkajsdfkjasdflkj" // TODO: actually read this form the env - think of a sensible default to read (SOMETHING_API_KEY) or it sould be customisable from config
+
+	llmService, err := llmservice.New(log, "GPT_4", API_KEY)
+	if err != nil {
+		log.Panicln(err)
+	}
+
+	llmService.Test()
+
+	app := gpttui.Init(llmService, gui, config)
 	gui.SetManagerFunc(app.GocuiLayout)
 
 	if err := app.SetKeybindings(); err != nil {
