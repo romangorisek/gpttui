@@ -1,0 +1,114 @@
+debug 2025/11/17 09:04:56 conversation height 38
+debug 2025/11/17 09:04:58 set insert mode
+debug 2025/11/17 09:05:01 set normal mode
+debug 2025/11/17 09:07:17 conversation height 38
+debug 2025/11/17 09:07:18 set insert mode
+debug 2025/11/17 09:07:23 set normal mode
+debug 2025/11/17 10:33:54 conversation height 38
+debug 2025/11/17 10:33:55 set insert mode
+debug 2025/11/17 10:34:17 submit the query... this is some text
+this is new line
+again this is working nice....
+debug 2025/11/17 10:41:37 set insert mode
+debug 2025/11/17 10:41:54 set normal mode
+debug 2025/11/17 11:42:51 conversation height 38
+debug 2025/11/17 11:42:52 set insert mode
+debug 2025/11/17 11:42:53 set normal mode
+debug 2025/11/17 12:11:21 conversation height 38
+debug 2025/11/17 12:12:05 conversation height 38
+debug 2025/11/17 12:36:56 conversation height 38
+debug 2025/11/17 12:36:58 set insert mode
+debug 2025/11/17 12:37:26 set normal mode
+debug 2025/11/17 12:37:35 conversation height 38
+debug 2025/11/17 12:37:37 set insert mode
+debug 2025/11/17 12:38:05 set normal mode
+debug 2025/11/17 12:46:07 conversation height 38
+debug 2025/11/17 12:46:08 set insert mode
+debug 2025/11/17 12:46:14 set normal mode
+debug 2025/11/17 12:46:30 conversation height 38
+debug 2025/11/17 12:46:31 set insert mode
+debug 2025/11/17 12:46:39 set normal mode
+debug 2025/11/17 13:08:40 conversation height 38
+debug 2025/11/17 13:08:42 set insert mode
+debug 2025/11/17 13:08:45 submit the query... asdfaf asdfjaf
+debug 2025/11/17 14:45:21 conversation height 38
+debug 2025/11/17 14:45:22 set insert mode
+debug 2025/11/17 14:45:25 submit the query... some text
+debug 2025/11/17 14:47:23 conversation height 38
+debug 2025/11/17 14:47:24 set insert mode
+debug 2025/11/17 14:47:28 submit the query... teses3estestest
+debug 2025/11/17 14:48:36 got a msg! {133 45}
+debug 2025/11/17 14:48:36 conversation height 38
+debug 2025/11/17 14:48:39 got a msg! i
+debug 2025/11/17 14:48:39 set insert mode
+debug 2025/11/17 14:48:42 got a msg! a
+debug 2025/11/17 14:48:42 got a msg! s
+debug 2025/11/17 14:48:42 got a msg! d
+debug 2025/11/17 14:48:42 got a msg! f
+debug 2025/11/17 14:48:42 got a msg! k
+debug 2025/11/17 14:48:42 got a msg! j
+debug 2025/11/17 14:48:42 got a msg! a
+debug 2025/11/17 14:48:42 got a msg! s
+debug 2025/11/17 14:48:43 got a msg! d
+debug 2025/11/17 14:48:43 got a msg! f
+debug 2025/11/17 14:48:43 got a msg! l
+debug 2025/11/17 14:48:43 got a msg! k
+debug 2025/11/17 14:48:43 got a msg! j
+debug 2025/11/17 14:48:46 got a msg! enter
+debug 2025/11/17 14:48:46 submit the query... asdfkjasdflkj
+debug 2025/11/17 14:49:01 got a msg! q
+debug 2025/11/17 14:53:35 conversation height 38
+debug 2025/11/17 14:53:36 set insert mode
+debug 2025/11/17 14:53:38 submit the query... asdfasdf
+debug 2025/11/17 14:54:08 conversation height 38
+debug 2025/11/17 14:54:09 set insert mode
+debug 2025/11/17 14:54:10 submit the query... asldkfjasfd
+debug 2025/11/17 14:54:10 returning the submitted msg
+debug 2025/11/17 14:57:43 conversation height 38
+debug 2025/11/17 14:57:44 set insert mode
+debug 2025/11/17 14:57:45 submit the query... asdfasdf
+debug 2025/11/17 14:58:42 set insert mode
+debug 2025/11/17 14:58:43 set normal mode
+debug 2025/11/17 14:58:45 conversation height 38
+debug 2025/11/17 14:58:46 set insert mode
+debug 2025/11/17 14:58:46 new cmd: <nil>
+debug 2025/11/17 14:58:46 new cmd: <nil>
+debug 2025/11/17 14:58:46 new cmd: <nil>
+debug 2025/11/17 14:58:46 new cmd: <nil>
+debug 2025/11/17 14:58:46 new cmd: <nil>
+debug 2025/11/17 14:58:47 new cmd: <nil>
+debug 2025/11/17 14:58:47 new cmd: <nil>
+debug 2025/11/17 14:58:47 new cmd: <nil>
+debug 2025/11/17 14:58:47 new cmd: <nil>
+debug 2025/11/17 14:58:47 new cmd: <nil>
+debug 2025/11/17 14:58:47 new cmd: <nil>
+debug 2025/11/17 14:58:47 new cmd: <nil>
+debug 2025/11/17 14:58:47 submit the query... asdfkjajsdf
+debug 2025/11/17 14:58:47 new cmd: <nil>
+debug 2025/11/17 15:00:12 conversation height 38
+debug 2025/11/17 15:00:13 set insert mode
+debug 2025/11/17 15:00:13 new cmd: <nil>
+debug 2025/11/17 15:00:14 new cmd: <nil>
+debug 2025/11/17 15:00:14 new cmd: <nil>
+debug 2025/11/17 15:00:14 new cmd: <nil>
+debug 2025/11/17 15:00:14 new cmd: <nil>
+debug 2025/11/17 15:00:14 new cmd: <nil>
+debug 2025/11/17 15:00:14 new cmd: <nil>
+debug 2025/11/17 15:00:14 new cmd: <nil>
+debug 2025/11/17 15:00:14 new cmd: <nil>
+debug 2025/11/17 15:00:16 submit the query... new test
+debug 2025/11/17 15:00:16 new cmd: 0x1030ce2f0
+debug 2025/11/17 15:00:16 submit the message: 
+debug 2025/11/17 15:05:19 conversation height 38
+debug 2025/11/17 15:05:19 set insert mode
+debug 2025/11/17 15:05:22 submit the query... nooooow!!
+debug 2025/11/17 15:05:22 submit the message: nooooow!!
+debug 2025/11/17 15:25:00 conversation height 38
+debug 2025/11/17 15:25:12 set normal mode
+debug 2025/11/17 15:25:16 set normal mode
+debug 2025/11/17 15:25:17 set insert mode
+debug 2025/11/17 15:25:17 set normal mode
+debug 2025/11/17 15:25:17 set insert mode
+debug 2025/11/17 15:25:18 set normal mode
+debug 2025/11/17 15:25:22 set insert mode
+debug 2025/11/17 15:25:35 set normal mode
