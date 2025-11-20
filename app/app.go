@@ -71,8 +71,10 @@ func (app *App) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		return app, nil
 
 	case inputPane.InputSubmittedMsg:
-		// app.conversationPane.appendQuestion(msg.Text)
-		log.Printf("submit the message: %s", msg.Text)
+		app.conversationPane.AppendQuestion(msg.Text)
+	case inputPane.PaneResizeMsg:
+		log.Println("got pane resize msg")
+		app.conversationPane.SetInputHeight(msg.Height)
 	case conversationPane.SetInsertModeMsg:
 		app.conversationPane.Blur()
 		app.inputPane.Focus()
@@ -83,7 +85,11 @@ func (app *App) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			app.quitting = true
 			return app, tea.Quit
 		case key.Matches(msg, keys.Keys.Quit):
-			if !(app.inputPane.Focused && app.inputPane.Mode == inputPane.Insert) {
+			if app.inputPane.Focused && app.inputPane.Mode == inputPane.Insert {
+				newInputPane, cmd := app.inputPane.Update(msg)
+				app.inputPane = newInputPane.(*inputPane.Model)
+				cmds = append(cmds, cmd)
+			} else {
 				app.quitting = true
 				return app, tea.Quit
 			}
