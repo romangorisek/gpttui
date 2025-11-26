@@ -1,8 +1,6 @@
 package app
 
 import (
-	"log"
-
 	"github.com/charmbracelet/bubbles/key"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
@@ -73,7 +71,6 @@ func (app *App) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	case inputPane.InputSubmittedMsg:
 		app.conversationPane.AppendQuestion(msg.Text)
 	case inputPane.PaneResizeMsg:
-		log.Println("got pane resize msg")
 		app.conversationPane.SetInputHeight(msg.Height)
 	case conversationPane.SetInsertModeMsg:
 		app.conversationPane.Blur()

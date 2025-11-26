@@ -1,8 +1,6 @@
 package conversationPane
 
 import (
-	"log"
-
 	"github.com/charmbracelet/bubbles/key"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
@@ -10,6 +8,7 @@ import (
 	"github.com/romangorisek/gpttui/app/panes"
 	"github.com/romangorisek/gpttui/constants"
 	"github.com/romangorisek/gpttui/keys"
+	"github.com/romangorisek/gpttui/utils/text"
 )
 
 type SetInsertModeMsg struct{}
@@ -52,7 +51,6 @@ func (m *Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		m.Width = msg.Width - 2
 		m.windowHeight = msg.Height
 		m.Height = m.windowHeight - 2 - (m.inputHeight + 2) - 2
-		log.Printf("conversation height %d, input %d, term %d", m.Height, m.inputHeight, msg.Height)
 		m.SetSize(m.Width, m.Height)
 	case tea.KeyMsg:
 		switch {
@@ -65,14 +63,14 @@ func (m *Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	return m, cmd
 }
 
-func (m *Model) AppendQuestion(text string) {
-	m.Messages = append(m.Messages, ConversationMsg{Text: text, ItemType: Question})
+func (m *Model) AppendQuestion(t string) {
+	t = text.ToMaxWidth(t, m.Width-6-2)
+	m.Messages = append(m.Messages, ConversationMsg{Text: t, ItemType: Question})
 }
 
 func (m *Model) SetInputHeight(height int) {
 	m.inputHeight = height
 	m.Height = m.windowHeight - 2 - (m.inputHeight + 2) - 2
-	log.Printf("conversation height %d, input %d, term %d", m.Height, m.inputHeight, m.windowHeight)
 	m.SetSize(m.Width, m.Height)
 }
 

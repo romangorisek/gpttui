@@ -1,11 +1,16 @@
 package keys
 
-import "github.com/charmbracelet/bubbles/key"
+import (
+	"github.com/charmbracelet/bubbles/key"
+)
 
-// ShortHelp returns keybindings to be shown in the mini help view. It's part
+// ShortHelp returns keybindings to be shown in the mini help view.  It's part
 // of the key.Map interface.
-func (k keyMap) HelpRow() []key.Binding {
-	return []key.Binding{k.Help, k.Quit}
+func (k keyMap) ShortHelp() []key.Binding {
+	return []key.Binding{
+		k.Help,
+		k.Quit,
+	}
 }
 
 // FullHelp returns keybindings for the expanded help view. It's part of the
